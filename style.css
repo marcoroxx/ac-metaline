@@ -655,3 +655,46 @@ body {
         .footer-right ul li + li {
             margin-top: 10px;
         }
+
+
+/*adattamento cellulari e altro*/
+/* Stili generali sopra */
+
+/* Media query per Tablet (schermi fino a 1024px) */
+@media screen and (max-width: 1024px) {
+    /* Adatta i font, dimensioni, e layout per i tablet */
+    body {
+        font-size: 16px;
+    }
+    .container {
+        padding: 15px;
+    }
+}
+
+/* Media query per Smartphone (schermi fino a 767px) */
+@media screen and (max-width: 767px) {
+    /* Stili specifici per smartphone */
+    body {
+        font-size: 14px;
+    }
+    nav {
+        display: none; /* Nascondi il menu se necessario */
+    }
+    .content {
+        margin: 10px;
+    }
+}
+
+/* Media query per Smartphone piccoli (schermi fino a 480px) */
+@media screen and (max-width: 480px) {
+    /* Stili per schermi molto piccoli */
+    body {
+        font-size: 12px;
+    }
+    .header {
+        text-align: center;
+    }
+    .container {
+        padding: 10px;
+    }
+}
