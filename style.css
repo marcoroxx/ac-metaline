@@ -93,7 +93,7 @@
     margin-left: 0.5vw; /* Riduci il margine per avvicinarlo alla bandiera */
     font-style: italic;
     font-weight: 300;
-    font-size: 1vw; /* Rendi il testo più piccolo */
+    font-size: 1.3vw; /* Rendi il testo più piccolo */
     color: #000;
     display: flex; /* Allinea il contenuto in linea con la bandiera */
     align-items: center; /* Centra verticalmente il testo con la bandiera */
@@ -118,6 +118,110 @@
     color: #333;
     cursor: pointer;
 }
+/* Media Query per schermi più piccoli (mobile) */
+@media (max-width: 768px) {
+    /* Consegna gratuita */
+    .consegna-gratuita {
+        font-size: 4vw; /* Aumenta la dimensione del font per mobile */
+        padding: 2vw; /* Aumenta il padding */
+    }
+
+    #Grassetto {
+        font-size: 4vw; /* Aumenta la dimensione del font */
+        padding: 2vw; /* Aumenta il padding */
+    }
+
+    .icon-furgoncino {
+        width: 5vw; /* Aumenta la dimensione dell'icona */
+        height: auto;
+        margin-bottom: 1vw; /* Spazio sopra il logo */
+    }
+
+    /* Header */
+    .header {
+        display: flex;
+        justify-content: space-between; /* Distribuisce gli spazi tra i contenuti */
+        align-items: center;
+        width: 100%; /* Occupa tutta la larghezza disponibile */
+        gap: 2vw; /* Spaziatura tra gli elementi */
+    }
+
+    /* Logo e Nome ditta */
+    .logo {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start; /* Allinea a sinistra */
+        width: 50%; /* 50% per il logo e nome */
+    }
+
+    .logo img {
+        width: 18vw; /* Aumenta la larghezza del logo */
+        height: auto;
+    }
+
+    .logo-text {
+        text-align: left; /* Allinea il testo a sinistra */
+        margin-left: 1vw; /* Aggiungi margine a sinistra */
+    }
+
+    .nome-ditta {
+        font-size: 8vw; /* Aumenta la dimensione del nome per mobile */
+        margin: 0;
+    }
+
+    .slogan {
+        font-size: 2.5vw; /* Aumenta la dimensione dello slogan */
+        margin-top: 1vw;
+    }
+
+    /* Bandiera e testo "Made in Italy" */
+    .made-in-italy {
+        font-size: 2.5vw; /* Aumenta la dimensione del testo */
+        margin-top: 1vw; /* Aggiunge spazio sopra */
+        text-align: right; /* Allinea a destra */
+    }
+
+    .bandiera-italiana {
+        width: 8vw; /* Aumenta la larghezza della bandiera */
+        height: auto;
+        margin-left: 1vw; /* Spazio a sinistra della bandiera */
+    }
+
+    /* Home Decor */
+    .home-decor {
+        font-size: 1.5vw; /* Ridimensiona "Home Decor" */
+        margin-bottom: 1vw; /* Aggiunge margine sotto */
+    }
+
+    /* Barra di ricerca */
+    .search-container {
+        width: 100%; /* Barra di ricerca occupa tutta la larghezza */
+        display: flex;
+        justify-content: space-between; /* Spaziatura tra la barra di ricerca e il selettore lingua */
+        align-items: center;
+        margin-top: 2vw; /* Spazio sopra la barra di ricerca */
+    }
+
+    .search-container input {
+        font-size: 4vw; /* Aumenta la dimensione del testo nella barra di ricerca */
+        padding: 2vw; /* Aumenta il padding */
+        width: 85%; /* La barra occupa la maggior parte dello spazio disponibile */
+    }
+
+    .lingua {
+        font-size: 4vw; /* Aumenta la dimensione del testo */
+        padding: 2vw;
+        width: 12%; /* Riduce la larghezza del selettore lingua */
+        text-align: center; /* Allinea il testo */
+    }
+}
+
+
+
+
+
+
+
 
 /* Formattazione NAV */
 nav {
@@ -135,88 +239,88 @@ nav {
 }
 
 .dropbtn {
-    background-color: #f1f1f1; /* Colore di sfondo */
-    color: #6f6f6f; /* Colore del testo */
+    background-color: inherit; /* Colore di sfondo trasparente */
+    color: #6f6f6f; /* Colore iniziale del testo */
     padding: 10px 20px; /* Padding */
-    font-size: 1.5vw; /* Dimensione del font (uguale a nav a) */
+    font-size: 2vw; /* Dimensione del font */
     border: none; /* Nessun bordo */
     cursor: pointer; /* Cambia il cursore */
-    height: 100%; /* Allineamento verticale */
-    font-family: arial, sans-serif; /* Stessa famiglia di caratteri dei link */
     text-decoration: none; /* Nessuna decorazione */
-    white-space: nowrap; /* Impedisce la rottura del testo */
-    transition: color 0.3s; /* Transizione morbida del colore */
+    white-space: nowrap; /* Evita la rottura del testo */
+    transition: color 0.3s, background-color 0.3s; /* Transizioni morbide */
     outline: none; /* Rimuove il bordo di focus */
-}
+    font-family: 'Roboto', sans-serif; /* Usa il font Roboto per il testo */
+    font-weight: 700; /* Imposta il font in grassetto */
+  }
 
 .dropbtn:hover {
-    color: red; /* Colore rosso al passaggio del mouse */
-}
-
-.dropbtn:focus {
-    color: #6f6f6f; /* Ripristina il colore principale quando perde il focus */
-}
-
-.dropbtn:active {
-    color: red; /* Colore rosso durante il clic */
+    color: red; /* Il testo diventa rosso al passaggio del mouse */
+    background-color: inherit; /* Mantiene il colore di sfondo trasparente */
 }
 
 /* Stile per il contenuto del dropdown */
+/* Stile per il contenuto del dropdown */
 .dropdown-content {
-    display: none; /* Nascondi la lista di prodotti di default */
-    position: absolute; /* Posizione assoluta per la lista */
-    background-color: #f9f9f9; /* Colore di sfondo della lista */
-    min-width: 800px; /* Larghezza minima della lista per adattarsi a 4 colonne */
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); /* Ombra per la lista */
-    z-index: 1; /* Sovrappone la lista sopra altri elementi */
-    display: flex; /* Usa il layout flex per posizionare le colonne una accanto all'altra */
-    font-family: "Times New Roman", Times, serif;
+    display: none; /* Nascondi la lista di default */
+    position: absolute; /* Posizionamento assoluto */
+    background-color: #f9f9f9; /* Colore di sfondo */
+    min-width: 600px; /* Ridotta la larghezza minima */
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2); /* Ombra */
+    z-index: 1; /* Sovrapposizione sopra altri elementi */
+    display: flex; /* Layout flex per il posizionamento orizzontale */
+    justify-content: flex-start; /* Riduce lo spazio tra colonne */
+    gap: 10px; /* Ridotto lo spazio tra colonne */
+    padding: 10px; /* Ridotto il padding interno */
 }
 
+/* Colonne del menu */
 .column {
     flex: 1; /* Le colonne occupano lo stesso spazio */
-    padding: 10px; /* Padding per ogni colonna */
+    padding: 5px; /* Ridotto il padding interno */
 }
 
+/* Link del menu */
 .dropdown-content a {
-    color: black; /* Colore del testo dei link */
-    padding: 8px 16px; /* Padding per i link */
+    color: black; /* Colore del testo */
+    padding: 5px 8px; /* Ridotto il padding tra i link */
     text-decoration: none; /* Nessuna decorazione */
-    display: block; /* Mostra i link come blocchi */
+    display: block; /* Ogni link come blocco */
     font-family: "Times New Roman", Times, serif;
-    font-weight: normal; /* Rimuovi il grassett
+    font-size: 0.9rem; /* Ridotta la dimensione del testo */
+    white-space: nowrap; /* Evita la rottura del testo */
+}
 
-}
+/* Hover sui link */
 .dropdown-content a:hover {
-  background-color: #f1f1f1;
+    background-color: #f1f1f1; /* Sfondo al passaggio del mouse */
 }
+
+/* Testo delle categorie */
 .category {
-  font-weight: bold; /* Testo della categoria in grassetto */
-  margin-bottom: 5px; /* Spazio sotto il nome della categoria */
-}
-/* formattazione bottoni categoria */
-.category-button {
-    background-color: transparent; /* Trasparente per il pulsante */
-    color: #6f6f6f; /* Colore del testo */
-    padding: 8px 16px; /* Padding per il pulsante */
-    border: none; /* Nessun bordo */
-    cursor: pointer; /* Cambia il cursore al passaggio del mouse */
-    text-align: left; /* Allinea il testo a sinistra */
-    width: 100%; /* Occupa tutta la larghezza della colonna */
-    font-family: "Times New Roman", Times, serif;
+    font-weight: bold; /* Grassetto */
+    margin-bottom: 3px; /* Ridotto spazio sotto la categoria */
 }
 
 /* Effetto hover per il pulsante delle categorie */
-.category-button:hover {
-    background-color: #f1f1f1; /* Colore di sfondo al passaggio del mouse */
+.category-button {
+    padding: 5px 8px; /* Ridotto padding per compattezza */
+}
+
+/* Media query per dispositivi piccoli */
+@media (max-width: 768px) {
+    .dropdown-content {
+        flex-direction: column; /* Menu impilato verticalmente */
+        min-width: 100%; /* Larghezza adattiva */
+    }
 }
 
 
 nav a {
     text-decoration: none;
     color: #6f6f6f;
-    font-size: 1.5vw;
-    font-family: arial, sans-serif;
+    font-size: 2vw;
+    font-family: 'Roboto', sans-serif; /* Usa il font Roboto per il testo */
+    font-weight: 700;
     transition: color 0.3s; /* Aggiunge una transizione morbida quando cambia il colore */
     white-space: nowrap;
 }
@@ -244,6 +348,20 @@ h3 {
 p {
   font-size: 1.2vw;
 }
+/*pulsanti prodotti sul cell*/
+@media (max-width: 768px) {
+    nav a, .dropbtn {
+        font-size: 3.2vw; /* Riduci leggermente la dimensione del font */
+        padding: 5.8px; /* Mantieni un buon padding senza eccedere */
+    }
+
+    nav {
+        gap: 1.8vw; /* Spazio leggermente ridotto tra i tasti */
+    }
+}
+
+
+
 /* Media Queries per Dispositivi più Piccoli */
 @media (max-width: 768px) {
   .search-container {
@@ -532,114 +650,144 @@ section {
     /* Stile base già definito (non duplicato) */
 
     /* Media Query per Smartphone (max-width: 600px) */
-    @media (max-width: 600px) {
-        section {
-            margin: 10px; /* Riduci il margine per schermi piccoli */
-        }
-
-        .row {
-            flex-direction: column; /* Disporre i prodotti in colonna */
-            gap: 10px;
-        }
-
-        .row div {
-            margin: 10px 0; /* Riduci margini laterali per prodotti */
-        }
-
-        .row img {
-            width: 100px; /* Dimensioni immagine ridotte */
-            height: 100px;
-        }
-
-        .highlight-section {
-            flex-direction: column; /* Disporre immagine e testo in colonna */
-            align-items: center; /* Centrare il contenuto */
-            padding: 10px; /* Ridurre padding */
-        }
-
-        .highlight-image {
-            width: 80%; /* Immagine più piccola */
-            max-width: 300px; /* Limita larghezza massima */
-            margin-bottom: 10px; /* Spazio tra immagine e testo */
-        }
-
-        .highlight-description {
-            text-align: center; /* Centrare il testo */
-            margin-left: 0; /* Rimuovi margine laterale */
-        }
-
-        .customization-section {
-            padding: 20px 10px; /* Ridurre padding */
-        }
-
-        .customization-title {
-            font-size: 100px; /* Ridurre dimensione titolo */
-        }
-
-        .customization-text {
-            font-size: 16px; /* Ridurre dimensione testo */
-            top: 20%; /* Adattare posizione */
-        }
-
-        .contact-button {
-            font-size: 14px; /* Ridurre font del pulsante */
-            padding: 8px 15px; /* Ridurre padding del pulsante */
-        }
+@media (max-width: 600px) {
+    section {
+        margin: 10px; /* Riduci il margine per schermi piccoli */
     }
 
-    /* Media Query per Tablet (min-width: 601px e max-width: 1024px) */
-    @media (min-width: 601px) and (max-width: 1024px) {
-        section {
-            margin: 15px; /* Margine intermedio per tablet */
-        }
-
-        .row {
-            flex-wrap: wrap; /* Permetti ai prodotti di andare a capo */
-            gap: 20px;
-        }
-
-        .row div {
-            flex: 1 1 45%; /* Due prodotti per riga (45% ciascuno) */
-            margin: 10px; /* Margine uniforme */
-        }
-
-        .row img {
-            width: 120px; /* Dimensioni immagine intermedie */
-            height: 120px;
-        }
-
-        .highlight-section {
-            flex-direction: row; /* Mantieni disposizione in riga */
-            align-items: flex-start;
-            padding: 15px; /* Riduci padding */
-        }
-
-        .highlight-image {
-            width: 40%; /* Adatta dimensione immagine */
-            max-width: 400px;
-        }
-
-        .highlight-description {
-            margin-left: 15px; /* Riduci margine */
-        }
-
-        .customization-section {
-            padding: 25px 15px; /* Riduci padding per tablet */
-        }
-
-        .customization-title {
-            font-size: 120px; /* Dimensione titolo intermedia */
-        }
-
-        .customization-text {
-            font-size: 18px; /* Adatta dimensione testo */
-        }
-
-        .contact-button {
-            font-size: 16px; /* Dimensione pulsante intermedia */
-            padding: 10px 18px;
-        }
+    .row {
+        flex-direction: column; /* Disporre i prodotti in colonna */
+        gap: 10px;
     }
+
+    .row div {
+        margin: 10px 0; /* Riduci margini laterali per prodotti */
+    }
+
+    .row img {
+        width: 100px; /* Dimensioni immagine ridotte */
+        height: 100px;
+    }
+
+    .highlight-section {
+        flex-direction: column; /* Disporre immagine e testo in colonna */
+        align-items: center; /* Centrare il contenuto */
+        padding: 10px; /* Ridurre padding */
+    }
+
+    .highlight-image {
+        width: 80%; /* Immagine più piccola */
+        max-width: 300px; /* Limita larghezza massima */
+        margin-bottom: 10px; /* Spazio tra immagine e testo */
+    }
+
+    .highlight-description {
+        text-align: center; /* Centrare il testo */
+        margin-left: 0; /* Rimuovi margine laterale */
+    }
+
+    /* Sezione Personalizza */
+    .customization-section {
+        display: flex;
+        flex-direction: column; /* Disporre gli elementi in colonna */
+        align-items: center; /* Centrare gli elementi */
+        gap: 100px; /* Spazio tra gli elementi */
+        padding: 20px 10px; /* Ridurre padding */
+    }
+
+    /* Titolo Personalizza */
+    .customization-title {
+        font-size: 8vw; /* Aumenta la dimensione del titolo */
+        margin-bottom: 10px; /* Spazio sotto il titolo */
+        text-align: center; /* Centra il titolo */
+    }
+
+    /* Testo descrittivo */
+    .customization-text {
+        font-size: 4vw; /* Aumenta la dimensione del testo */
+        text-align: center; /* Centra il testo */
+        margin-bottom: 20px; /* Spazio sotto il testo */
+    }
+
+    /* Pulsante Contattami */
+    .contact-button {
+        font-size: 4vw; /* Aumenta la dimensione del pulsante */
+        padding: 8px 15px; /* Ridurre padding del pulsante */
+        margin-top: 35px; /* Distanza dal testo */
+        text-align: center; /* Centra il pulsante */
+    }
+}
+
+/* Media Query per Tablet (min-width: 601px e max-width: 1024px) */
+@media (min-width: 601px) and (max-width: 1024px) {
+    section {
+        margin: 15px; /* Margine intermedio per tablet */
+    }
+
+    .row {
+        flex-wrap: wrap; /* Permetti ai prodotti di andare a capo */
+        gap: 20px;
+    }
+
+    .row div {
+        flex: 1 1 45%; /* Due prodotti per riga (45% ciascuno) */
+        margin: 10px; /* Margine uniforme */
+    }
+
+    .row img {
+        width: 120px; /* Dimensioni immagine intermedie */
+        height: 120px;
+    }
+
+    .highlight-section {
+        flex-direction: row; /* Mantieni disposizione in riga */
+        align-items: flex-start;
+        padding: 15px; /* Riduci padding */
+    }
+
+    .highlight-image {
+        width: 40%; /* Adatta dimensione immagine */
+        max-width: 400px;
+    }
+
+    .highlight-description {
+        margin-left: 15px; /* Riduci margine */
+    }
+
+    /* Sezione Personalizza */
+    .customization-section {
+        display: flex;
+        flex-direction: column; /* Disporre gli elementi in colonna */
+        align-items: center; /* Centrare gli elementi */
+        gap: 150px; /* Spazio tra gli elementi */
+        padding: 25px 15px; /* Riduci padding per tablet */
+    }
+
+    /* Titolo Personalizza */
+    .customization-title {
+        font-size: 8vw; /* Dimensione titolo intermedia */
+        margin-bottom: 10vw;
+        text-align: center; /* Centra il titolo */
+    }
+
+    /* Testo descrittivo */
+    .customization-text {
+        font-size: 4vw; /* Adatta dimensione testo */
+        margin-bottom: 10vw;
+        text-align: center; /* Centra il testo */
+    }
+
+    /* Pulsante Contattami */
+    .contact-button {
+        font-size: 5vw; /* Dimensione pulsante intermedia */
+        padding: 10px 18px;
+        text-align: center; /* Centra il pulsante */
+    }
+}
+
+
+
+
 
 
 
@@ -842,4 +990,3 @@ body {
         text-align: left;
     }
 }
-        
