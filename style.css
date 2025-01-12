@@ -529,8 +529,121 @@ section {
         background-color: #0056b3;
     }
 
+    /* Stile base già definito (non duplicato) */
+
+    /* Media Query per Smartphone (max-width: 600px) */
+    @media (max-width: 600px) {
+        section {
+            margin: 10px; /* Riduci il margine per schermi piccoli */
+        }
+
+        .row {
+            flex-direction: column; /* Disporre i prodotti in colonna */
+            gap: 10px;
+        }
+
+        .row div {
+            margin: 10px 0; /* Riduci margini laterali per prodotti */
+        }
+
+        .row img {
+            width: 100px; /* Dimensioni immagine ridotte */
+            height: 100px;
+        }
+
+        .highlight-section {
+            flex-direction: column; /* Disporre immagine e testo in colonna */
+            align-items: center; /* Centrare il contenuto */
+            padding: 10px; /* Ridurre padding */
+        }
+
+        .highlight-image {
+            width: 80%; /* Immagine più piccola */
+            max-width: 300px; /* Limita larghezza massima */
+            margin-bottom: 10px; /* Spazio tra immagine e testo */
+        }
+
+        .highlight-description {
+            text-align: center; /* Centrare il testo */
+            margin-left: 0; /* Rimuovi margine laterale */
+        }
+
+        .customization-section {
+            padding: 20px 10px; /* Ridurre padding */
+        }
+
+        .customization-title {
+            font-size: 100px; /* Ridurre dimensione titolo */
+        }
+
+        .customization-text {
+            font-size: 16px; /* Ridurre dimensione testo */
+            top: 20%; /* Adattare posizione */
+        }
+
+        .contact-button {
+            font-size: 14px; /* Ridurre font del pulsante */
+            padding: 8px 15px; /* Ridurre padding del pulsante */
+        }
+    }
+
+    /* Media Query per Tablet (min-width: 601px e max-width: 1024px) */
+    @media (min-width: 601px) and (max-width: 1024px) {
+        section {
+            margin: 15px; /* Margine intermedio per tablet */
+        }
+
+        .row {
+            flex-wrap: wrap; /* Permetti ai prodotti di andare a capo */
+            gap: 20px;
+        }
+
+        .row div {
+            flex: 1 1 45%; /* Due prodotti per riga (45% ciascuno) */
+            margin: 10px; /* Margine uniforme */
+        }
+
+        .row img {
+            width: 120px; /* Dimensioni immagine intermedie */
+            height: 120px;
+        }
+
+        .highlight-section {
+            flex-direction: row; /* Mantieni disposizione in riga */
+            align-items: flex-start;
+            padding: 15px; /* Riduci padding */
+        }
+
+        .highlight-image {
+            width: 40%; /* Adatta dimensione immagine */
+            max-width: 400px;
+        }
+
+        .highlight-description {
+            margin-left: 15px; /* Riduci margine */
+        }
+
+        .customization-section {
+            padding: 25px 15px; /* Riduci padding per tablet */
+        }
+
+        .customization-title {
+            font-size: 120px; /* Dimensione titolo intermedia */
+        }
+
+        .customization-text {
+            font-size: 18px; /* Adatta dimensione testo */
+        }
+
+        .contact-button {
+            font-size: 16px; /* Dimensione pulsante intermedia */
+            padding: 10px 18px;
+        }
+    }
 
 
+
+/*pie di pagina*/
 
 body {
             margin: 0;
@@ -657,3 +770,76 @@ body {
         .footer-right ul li + li {
             margin-top: 10px;
         }
+/*media queri per cell*/
+/* Media Query per Smartphone (max-width: 600px) */
+@media (max-width: 600px) {
+    .footer-container, .footer-lower-container {
+        flex-direction: column; /* Disporre le sezioni in colonna */
+        align-items: center; /* Centrare il contenuto */
+        text-align: center;
+    }
+
+    .footer-box {
+        border-right: none; /* Rimuovi il bordo di separazione */
+        margin-bottom: 10px; /* Spazio tra i box */
+    }
+
+    .footer-left {
+        align-items: center; /* Centrare i contenuti */
+    }
+
+    .footer-left p {
+        text-align: center;
+    }
+
+    .footer-left .social-icons {
+        justify-content: center; /* Centrare le icone */
+        gap: 15px; /* Ridurre la distanza tra le icone */
+    }
+
+    .footer-right {
+        flex-direction: column; /* Disporre i contenuti in colonna */
+        align-items: center;
+        gap: 10px; /* Spazio tra le sezioni */
+    }
+
+    .footer-right ul {
+        text-align: center;
+    }
+}
+
+/* Media Query per Tablet (min-width: 601px e max-width: 1024px) */
+@media (min-width: 601px) and (max-width: 1024px) {
+    .footer-container, .footer-lower-container {
+        flex-wrap: wrap; /* Permetti ai contenuti di andare a capo */
+        gap: 20px; /* Spazio tra le sezioni */
+    }
+
+    .footer-box {
+        flex: 1 1 50%; /* Due colonne su tablet */
+        margin-bottom: 10px;
+    }
+
+    .footer-left {
+        align-items: flex-start; /* Allinea a sinistra */
+        text-align: left;
+    }
+
+    .footer-left p {
+        text-align: left;
+    }
+
+    .footer-left .social-icons {
+        justify-content: flex-start; /* Allinea a sinistra */
+        gap: 20px; /* Mantieni lo spazio tra le icone */
+    }
+
+    .footer-right {
+        justify-content: space-evenly; /* Distribuisci uniformemente */
+    }
+
+    .footer-right ul {
+        text-align: left;
+    }
+}
+        
